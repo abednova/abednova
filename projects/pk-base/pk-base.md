@@ -27,8 +27,10 @@
 
 ---
 **Документация**:
-- **Тест-кейсы**: [Демо онлайн](https://md-test-cases-app.onrender.com/) / [Markdown](./projects/portfolio/test-cases.md)
-- **[Чек-листы](./projects/portfolio/checklists.md)** 
-- **[Коллекции в Postman](./projects/portfolio/collection.json)** 
-- **[Тестовые сценарии](./projects/portfolio/test-scenarios.md)** 
+- **Тест-кейсы**: [Демо онлайн](https://md-test-cases-app.onrender.com/) / [Markdown](./test-cases.md)
+- **[Баг-репорты](./task-tracker.md)**
+- **[Техники тест-дизайна](./test-design.md)** 
+- **[Чек-листы](./checklists.md)** 
+- **[Коллекции в Postman](./collection.json)** 
+- **[Тестовые сценарии](./test-scenarios.md)** 
 
