@@ -1,0 +1,1297 @@
+{
+	"info": {
+		"_postman_id": "ee52cebe-93a8-4ce4-86d5-d27274e01acc",
+		"name": "Pk base",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46689578",
+		"_collection_link": "https://anastasiya-1937873.postman.co/workspace/Anastasiya's-Workspace~5a47f198-195a-40dc-8596-d8a85e14c1d2/collection/46689578-ee52cebe-93a8-4ce4-86d5-d27274e01acc?action=share&source=collection_link&creator=46689578"
+	},
+	"item": [
+		{
+			"name": "autorizathion",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"alex@alexbednov.work\",\n  \"password\": \"123qwe123qwe\"\n}\n\n// {\n// \"email\": \"ivanqa@example.com\",\n//   \"password\": \"password123\"\n// }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/base/manager/auth/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiIyZTE1NGQ4YTIzNWI0MTI0ZDAzZTE0N2JlYzQzYmE4ZTdmMWE0YzU3NDE1YzRlZjkyMTgyZDAyYjA1YmFiZmFlM2M4ZGY2MmVjYjNlZmVmZiIsImlhdCI6MTc1ODU0MzgzMC4wNjM1ODQsIm5iZiI6MTc1ODU0MzgzMC4wNjM1ODcsImV4cCI6MTc1ODYzMDIyOS44NzY1MTEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.jfHgoB4x2tKuToRqOyj-3FKpj7tJHnWXlekjDCqJbeV1qrhJxGjiPvYOPBmzQnEqPkfff6ruSg6P4oSwoxXLW-wa3BYWe2QE3h31pKuM_qDPVutqc0RNklGFtMMmlqUbhb5O7r0VLJXuRhn5EQizvakuETqWBircct_LxziMlm0ZFx4TjefTmAVTRaodWJ24BPiA8tKaHSSXUy9Y7wYZXfcdpqJhjbvjWcXYbFf_WS1gzU7tJipw6XM0XPdl6l-6I3uwaKR9ItTnbRAHrfkf6igMFPhh06ZpBChi-LDSiKxnKBL84w88X4YcEKfU9dv_D1i72TbuRiUrqkEr7qOLWqvCowNhWOPLMCjd1LzkzD5RULOamo-Lt6x7JXpNjJGjIWe-idO9JlcYtlZwUR9w7RJbqvOkT47JTYMnJK_Pt470rBUR1gIRJYnxW8IcDovy-1e2HEZclC2OlTNuIMqzj4wqUSdtorHuvtbnR0tzONcg3uRX6sfN3f-N-Em1qPgc0TY0UGBDO_V222ShBlJpT9gaSOTt-UyQ5slIuxQIzLif2yP3L702IX2MhEnzO0kMcOCC9JOu3hSHO8d86EOMMRqucc3L1qIEdhyx-xH1sGXKm_CJCMDlZCeX_abhOMSKdskPYvgM1GwdgwPvD6zDkOt64oz5sxLYl1pqYCu6XMw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/base/manager/auth/logout",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"auth",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiJiNzllNTY2NTEyMjk5YjBjMjdkMDc1NDU5ZTMyZmRlNzkxOGExNDYyMTQ3ZDlhOTFhZWExZWQ0NGNlZTZhNjUyODgyYmVmMWM5YTQ1MjFiNiIsImlhdCI6MTc1ODU0NDA4MS4zMjgxMjUsIm5iZiI6MTc1ODU0NDA4MS4zMjgxMjgsImV4cCI6MTc1ODYzMDQ4MS4xOTYyMywic3ViIjoiMSIsInNjb3BlcyI6W119.sd0GtFLO2OmhzVNcEDskjRHVL2qLo0qUJMyIiHcNiHWFBYZOt0wzYF5JIJ47PMJC84yVMKFOG4lABHXNlbN64oCbWs54NtXrdUKL4fo69C5USrFdooHATYICwMw32p9s34MTxgyxuLSb2IbLgOqz1-ZiMYw2Bg5yoNFtc-qUh2jR8MpKH_inMoMqMoP8u44By5hPOW7PwYyJo34gwFhvidltVbV1KUWoFlpK8aXpk3eCbj7iweblxGR_W1_S4v-VcNb--JhYFkYIrhNQ9mQ7E7ytsPHAvj9r_aoFQafLz9LTo6iPTYwj90MLEOu7HX9s6-W6MPQdiOYghKkWr63M2s0e6Bz_XxbMf6id0SodU01I3_H8jdSa1eoh0BV8WyJ4Dne1rAxpzEgUaL7sdYyA__yiz0h5RvRV7M--WQCQ3v3F_nOYG8PdztUDf00AllYQkqoYmPNKMOShJkyoCgjwYYkoM9GQFVQG7pOK7b6l0yf3gDeb3CQDgudhXuGWygy9KlPU8NoEG471mV0d2J2bUBoZiuAffErFVJ3VbLqmkkG_icYh1AlvhiHaLCzTOmbj2-ch_1z1oemP-qPsoSxpkIH1ZD6UlUV6e8ldrHFzWAXaqBu_sSduzo3D5fygXZuXnevGZfVYJ8gsdUlGsxiGyt-4yp5KW9AgM4o1CTqt5AQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/base/manager/auth/data",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"auth",
+								"data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/auth/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manager Schools",
+			"item": [
+				{
+					"name": "Список всех школ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiJiNzllNTY2NTEyMjk5YjBjMjdkMDc1NDU5ZTMyZmRlNzkxOGExNDYyMTQ3ZDlhOTFhZWExZWQ0NGNlZTZhNjUyODgyYmVmMWM5YTQ1MjFiNiIsImlhdCI6MTc1ODU0NDA4MS4zMjgxMjUsIm5iZiI6MTc1ODU0NDA4MS4zMjgxMjgsImV4cCI6MTc1ODYzMDQ4MS4xOTYyMywic3ViIjoiMSIsInNjb3BlcyI6W119.sd0GtFLO2OmhzVNcEDskjRHVL2qLo0qUJMyIiHcNiHWFBYZOt0wzYF5JIJ47PMJC84yVMKFOG4lABHXNlbN64oCbWs54NtXrdUKL4fo69C5USrFdooHATYICwMw32p9s34MTxgyxuLSb2IbLgOqz1-ZiMYw2Bg5yoNFtc-qUh2jR8MpKH_inMoMqMoP8u44By5hPOW7PwYyJo34gwFhvidltVbV1KUWoFlpK8aXpk3eCbj7iweblxGR_W1_S4v-VcNb--JhYFkYIrhNQ9mQ7E7ytsPHAvj9r_aoFQafLz9LTo6iPTYwj90MLEOu7HX9s6-W6MPQdiOYghKkWr63M2s0e6Bz_XxbMf6id0SodU01I3_H8jdSa1eoh0BV8WyJ4Dne1rAxpzEgUaL7sdYyA__yiz0h5RvRV7M--WQCQ3v3F_nOYG8PdztUDf00AllYQkqoYmPNKMOShJkyoCgjwYYkoM9GQFVQG7pOK7b6l0yf3gDeb3CQDgudhXuGWygy9KlPU8NoEG471mV0d2J2bUBoZiuAffErFVJ3VbLqmkkG_icYh1AlvhiHaLCzTOmbj2-ch_1z1oemP-qPsoSxpkIH1ZD6UlUV6e8ldrHFzWAXaqBu_sSduzo3D5fygXZuXnevGZfVYJ8gsdUlGsxiGyt-4yp5KW9AgM4o1CTqt5AQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/schools",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"schools"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "создать школу",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiJiMjM1ZGE5MDhmZTcwMzEzYzU0NWVkY2Y5ZmRiMTc0YzQ4NzYxZWIzYjdhNjZhNDJjZjM4OWRhMzI0OTMwY2YyNTRiYzNmMjlkMGYxNjQyMiIsImlhdCI6MTc1NzA2NjExOS4xNTc1OTIsIm5iZiI6MTc1NzA2NjExOS4xNTc1OTUsImV4cCI6MTc1NzE1MjUxOC45OTYwNjksInN1YiI6IjEiLCJzY29wZXMiOltdfQ.GifxMMS2i895lQVV3AkLmJ0ovFSP-ql5y5I_TN7ji-WtzFjcSBrjfiuQOPdV_JVgV83PcTMxhukdoSz_ukW3cGIemZbZ5CDspvsxZfBy-dtr9f29JLj3Qg3t73-dy4lkm2PRGLlR6gQKyCWH7RR_SoSDUsUB-URDxmXaZEvIjxDMVb_kCGY9ApOeSUJi2yQ1L_nHonjB03lClCrVDqFGXfbKxgN_EUIf3yn20-aBVV5SMdfyVLlByW0JhB5_-AgmdojfYR_L_K2W9vbxIxdjk9HrtDVUZf5xREfkJj57PkC2c56i4xpWjeHNK-w-2WUB58ciAxBrPIRQUDew91R-typK0ohSi_4PA36BAjlsIRTk_30mNOoaig3-7-i70nwR0fi7HYrX_Ls2-a-gG5YpD8IQe0jPu071zrpjbIefNNPqmdsfzgmuub6rm6xZcpkNr7aIfqXysPviSLgiYvLji1EbdpOUQP_Adnc-gcJDD-d4s6hzeN9FYZzhAoSaw6Yxk3KuUrjfT6MScL8XTqRbOTOmU7BLeXv_H_DEP6Jda7DiiPRhI9G9MSINjGz0QfOGVnBracxcf4_Ns-H2AV3S-epuuU3Lj43VRuEqr1d2Tjy8SaMTb62tIdIWbP39gztF-pKgO5XSPsdfZg88AMu4NCsbnTyturh6lTd_mjsL4Xo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"school_name\": {\n    \"ru\": \"Средняя школа №5\",\n    \"en\": \"Secondary School #5\"\n  },\n  \"district_id\": \"Brest region\",\n  \"region\": \"brestskiy\",\n  \"school_type\": \"secondary\",\n  \"school_number\": \"1\",\n  \"school_is_active\": true,\n  \"school_phone_iter\": {\n    \"ru\": \"+375 29 123-45-67\",\n    \"en\": \"+375 29 123-45-67\"\n  },\n  \"school_adress\": \"ул. Ленина, 1\",\n  \"school_email_iter\": {\n    \"ru\": \"school1@example.com\",\n    \"en\": \"school1@example.com\"\n  },\n  \"school_site\": \"https://school1.example.com\",\n  \"school_specialist_iter\": {\n    \"ru\": \"Иванов И.И.\",\n    \"en\": \"Ivanov I.I.\"\n  },\n  \"pk_data\": {\n    \"ru\": \"Данные ПК\",\n    \"en\": \"PC Data\"\n  },\n  \"science_directions\": \"Математика, Физика\",\n  \"publication\": {\n    \"ru\": \"Публикации\",\n    \"en\": \"Publications\"\n  },\n  \"is_lab\": false,\n  \"school_staff_statistics\": \"100\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/schools",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"schools"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получить школу",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiJiNzllNTY2NTEyMjk5YjBjMjdkMDc1NDU5ZTMyZmRlNzkxOGExNDYyMTQ3ZDlhOTFhZWExZWQ0NGNlZTZhNjUyODgyYmVmMWM5YTQ1MjFiNiIsImlhdCI6MTc1ODU0NDA4MS4zMjgxMjUsIm5iZiI6MTc1ODU0NDA4MS4zMjgxMjgsImV4cCI6MTc1ODYzMDQ4MS4xOTYyMywic3ViIjoiMSIsInNjb3BlcyI6W119.sd0GtFLO2OmhzVNcEDskjRHVL2qLo0qUJMyIiHcNiHWFBYZOt0wzYF5JIJ47PMJC84yVMKFOG4lABHXNlbN64oCbWs54NtXrdUKL4fo69C5USrFdooHATYICwMw32p9s34MTxgyxuLSb2IbLgOqz1-ZiMYw2Bg5yoNFtc-qUh2jR8MpKH_inMoMqMoP8u44By5hPOW7PwYyJo34gwFhvidltVbV1KUWoFlpK8aXpk3eCbj7iweblxGR_W1_S4v-VcNb--JhYFkYIrhNQ9mQ7E7ytsPHAvj9r_aoFQafLz9LTo6iPTYwj90MLEOu7HX9s6-W6MPQdiOYghKkWr63M2s0e6Bz_XxbMf6id0SodU01I3_H8jdSa1eoh0BV8WyJ4Dne1rAxpzEgUaL7sdYyA__yiz0h5RvRV7M--WQCQ3v3F_nOYG8PdztUDf00AllYQkqoYmPNKMOShJkyoCgjwYYkoM9GQFVQG7pOK7b6l0yf3gDeb3CQDgudhXuGWygy9KlPU8NoEG471mV0d2J2bUBoZiuAffErFVJ3VbLqmkkG_icYh1AlvhiHaLCzTOmbj2-ch_1z1oemP-qPsoSxpkIH1ZD6UlUV6e8ldrHFzWAXaqBu_sSduzo3D5fygXZuXnevGZfVYJ8gsdUlGsxiGyt-4yp5KW9AgM4o1CTqt5AQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/schools/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"schools",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "обновить школу",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiJiNzllNTY2NTEyMjk5YjBjMjdkMDc1NDU5ZTMyZmRlNzkxOGExNDYyMTQ3ZDlhOTFhZWExZWQ0NGNlZTZhNjUyODgyYmVmMWM5YTQ1MjFiNiIsImlhdCI6MTc1ODU0NDA4MS4zMjgxMjUsIm5iZiI6MTc1ODU0NDA4MS4zMjgxMjgsImV4cCI6MTc1ODYzMDQ4MS4xOTYyMywic3ViIjoiMSIsInNjb3BlcyI6W119.sd0GtFLO2OmhzVNcEDskjRHVL2qLo0qUJMyIiHcNiHWFBYZOt0wzYF5JIJ47PMJC84yVMKFOG4lABHXNlbN64oCbWs54NtXrdUKL4fo69C5USrFdooHATYICwMw32p9s34MTxgyxuLSb2IbLgOqz1-ZiMYw2Bg5yoNFtc-qUh2jR8MpKH_inMoMqMoP8u44By5hPOW7PwYyJo34gwFhvidltVbV1KUWoFlpK8aXpk3eCbj7iweblxGR_W1_S4v-VcNb--JhYFkYIrhNQ9mQ7E7ytsPHAvj9r_aoFQafLz9LTo6iPTYwj90MLEOu7HX9s6-W6MPQdiOYghKkWr63M2s0e6Bz_XxbMf6id0SodU01I3_H8jdSa1eoh0BV8WyJ4Dne1rAxpzEgUaL7sdYyA__yiz0h5RvRV7M--WQCQ3v3F_nOYG8PdztUDf00AllYQkqoYmPNKMOShJkyoCgjwYYkoM9GQFVQG7pOK7b6l0yf3gDeb3CQDgudhXuGWygy9KlPU8NoEG471mV0d2J2bUBoZiuAffErFVJ3VbLqmkkG_icYh1AlvhiHaLCzTOmbj2-ch_1z1oemP-qPsoSxpkIH1ZD6UlUV6e8ldrHFzWAXaqBu_sSduzo3D5fygXZuXnevGZfVYJ8gsdUlGsxiGyt-4yp5KW9AgM4o1CTqt5AQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"district\": \"gomel_region\",\n    \"region\": \"г. Гомель, Советский район\",\n    \"school_name\": {\n        \"ru\": \"ПИПКА\"\n    },\n    \"school_type\": \"gymn\",\n    \"school_number\": null,\n    \"school_is_active\": true,\n    \"school_phone_iter\": [\n        {\n            \"text\": \"Директор\",\n            \"phone\": \"+456337266666666666666666666666\"\n        },\n        {\n            \"text\": \"\",\n            \"phone\": \"\"\n        },\n        {\n            \"text\": \"\",\n            \"phone\": \"\"\n        }\n    ],\n    \"school_adress\": \"советская улица 5555\",\n    \"school_email_iter\": [\n        {\n            \"text\": \"Nacetr@kok.com\",\n            \"email\": \"\"\n        },\n        {\n            \"text\": \"\",\n            \"email\": \"\"\n        }\n    ],\n    \"school_site\": \"pipirka@yandex.com\",\n    \"school_specialist_iter\": null,\n    \"pk_data\": [\n        {\n            \"year\": \"2024/2025\",\n            \"students_all\": \"\",\n            \"pk_10\": \"100\",\n            \"pk_11\": \"9\",\n            \"is_active\": true,\n            \"pk_stud_10\": \"87\",\n            \"pk_stud_11\": \"565\",\n            \"pk_grad\": \"\",\n            \"pk_grad_target\": \"\",\n            \"pk_grad_recommend\": \"\",\n            \"pk_release_high_all\": \"1\",\n            \"pk_release_high_pk\": \"1\",\n            \"pk_release_med_all\": \"1\",\n            \"pk_release_med_pk\": \"1\",\n            \"pk_release_prof_all\": \"1\",\n            \"pk_release_other\": \"1\",\n            \"pk_molod_spec_all\": \"1\",\n            \"pk_molod_spec_district\": \"1\",\n            \"pk_molod_spec_other\": \"\",\n            \"pk_molod_spec_region\": \"1\",\n            \"pk_molod_spec_source\": \"1\",\n            \"school_notation\": \"1\"\n        }\n    ],\n    \"science_directions\": \"Изучение пипидастров\",\n    \"publication\": null,\n    \"is_lab\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/schools/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"schools",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete school",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiJiNzllNTY2NTEyMjk5YjBjMjdkMDc1NDU5ZTMyZmRlNzkxOGExNDYyMTQ3ZDlhOTFhZWExZWQ0NGNlZTZhNjUyODgyYmVmMWM5YTQ1MjFiNiIsImlhdCI6MTc1ODU0NDA4MS4zMjgxMjUsIm5iZiI6MTc1ODU0NDA4MS4zMjgxMjgsImV4cCI6MTc1ODYzMDQ4MS4xOTYyMywic3ViIjoiMSIsInNjb3BlcyI6W119.sd0GtFLO2OmhzVNcEDskjRHVL2qLo0qUJMyIiHcNiHWFBYZOt0wzYF5JIJ47PMJC84yVMKFOG4lABHXNlbN64oCbWs54NtXrdUKL4fo69C5USrFdooHATYICwMw32p9s34MTxgyxuLSb2IbLgOqz1-ZiMYw2Bg5yoNFtc-qUh2jR8MpKH_inMoMqMoP8u44By5hPOW7PwYyJo34gwFhvidltVbV1KUWoFlpK8aXpk3eCbj7iweblxGR_W1_S4v-VcNb--JhYFkYIrhNQ9mQ7E7ytsPHAvj9r_aoFQafLz9LTo6iPTYwj90MLEOu7HX9s6-W6MPQdiOYghKkWr63M2s0e6Bz_XxbMf6id0SodU01I3_H8jdSa1eoh0BV8WyJ4Dne1rAxpzEgUaL7sdYyA__yiz0h5RvRV7M--WQCQ3v3F_nOYG8PdztUDf00AllYQkqoYmPNKMOShJkyoCgjwYYkoM9GQFVQG7pOK7b6l0yf3gDeb3CQDgudhXuGWygy9KlPU8NoEG471mV0d2J2bUBoZiuAffErFVJ3VbLqmkkG_icYh1AlvhiHaLCzTOmbj2-ch_1z1oemP-qPsoSxpkIH1ZD6UlUV6e8ldrHFzWAXaqBu_sSduzo3D5fygXZuXnevGZfVYJ8gsdUlGsxiGyt-4yp5KW9AgM4o1CTqt5AQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/schools/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"schools",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manager Statistic",
+			"item": [
+				{
+					"name": "Stats by years",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "bsvhdkbfijkbfcnliasdjkzxhcn,",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"year\": \"2022/2023\",\n  \"class\": 10,\n  \"students\": 350\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/stats-by-years",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"stats-by-years"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiJhYWFkMTlkYjYyMzZiNzM3ODgwZGFjNTRiNWMzZGY5NmRlMjAxN2I1YWIxZjFkNmVlM2NmMDI3ZWJlYjQxMDYwNTU5MWNkYmU4ZjRjNDIzZCIsImlhdCI6MTc1NzA3NzEyMS4yNjg5NzIsIm5iZiI6MTc1NzA3NzEyMS4yNjg5NzQsImV4cCI6MTc1NzE2MzUyMS4xMDg0ODMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.GX0J7nmNxaa9awydkHcOYBRjXWe7EaN-oXlAdNFv4woDygX9wdsJ0aCUmDesEmjF07hKzujNNLVhpH16XVhgdnsjguy62YX0w36F54jBdHROFQe8ONrhiUEwV5j-gUQQfbhv786wfT2yFpi88WuD9UwXJ-jBUd3fE1M128-qPhvIb9FbDGcqU4dBdS-n9G9rDMgpTtB5TYVrzGXvzutTv4sFMnoqvKFCnn_eBtXWB_Lx2RZgmtIqFTC_6LEtbQQEsX-2nIAq4ZCEA5JivsH5TyWc0eS2-CmVTGLUulBym5hxhMk2zPMo1N__y1Uk21B4rgBlQ8gJhX13TVc3KrMeFHHc6iZsLxjaVqasg-uFSQrNN0dxWNE2tmdHi4lxDbjXRIxoetqknZpTrVSO8QNTTP0WmyJHjO7ezfiUMeieqV2fVFDYhDi8rKtjZfd6-lQ9Vufc2QlnGck1pVO23pXCC8eK7OK5drYkAuDR-ZhCt3VJRYh2b8uZleeQ_U-cFSi2D8b7hplunOUfFzjhGJKvGfKIDvtg1xD8tNn4hsSczaN7ZqPLuz-eWP59AsW_0GoIycMRH9KqY-ZlYA6rPR5fcPv4A8o_T0c2V6PDB79pXnpSSwfdb-W2pkYyed8xqkh3ALUS_lztUJOHAA6aEX2rT-jGzt1Bn7lWVZP32j5tJ28",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/stats-by-years/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"stats-by-years",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiJhYWFkMTlkYjYyMzZiNzM3ODgwZGFjNTRiNWMzZGY5NmRlMjAxN2I1YWIxZjFkNmVlM2NmMDI3ZWJlYjQxMDYwNTU5MWNkYmU4ZjRjNDIzZCIsImlhdCI6MTc1NzA3NzEyMS4yNjg5NzIsIm5iZiI6MTc1NzA3NzEyMS4yNjg5NzQsImV4cCI6MTc1NzE2MzUyMS4xMDg0ODMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.GX0J7nmNxaa9awydkHcOYBRjXWe7EaN-oXlAdNFv4woDygX9wdsJ0aCUmDesEmjF07hKzujNNLVhpH16XVhgdnsjguy62YX0w36F54jBdHROFQe8ONrhiUEwV5j-gUQQfbhv786wfT2yFpi88WuD9UwXJ-jBUd3fE1M128-qPhvIb9FbDGcqU4dBdS-n9G9rDMgpTtB5TYVrzGXvzutTv4sFMnoqvKFCnn_eBtXWB_Lx2RZgmtIqFTC_6LEtbQQEsX-2nIAq4ZCEA5JivsH5TyWc0eS2-CmVTGLUulBym5hxhMk2zPMo1N__y1Uk21B4rgBlQ8gJhX13TVc3KrMeFHHc6iZsLxjaVqasg-uFSQrNN0dxWNE2tmdHi4lxDbjXRIxoetqknZpTrVSO8QNTTP0WmyJHjO7ezfiUMeieqV2fVFDYhDi8rKtjZfd6-lQ9Vufc2QlnGck1pVO23pXCC8eK7OK5drYkAuDR-ZhCt3VJRYh2b8uZleeQ_U-cFSi2D8b7hplunOUfFzjhGJKvGfKIDvtg1xD8tNn4hsSczaN7ZqPLuz-eWP59AsW_0GoIycMRH9KqY-ZlYA6rPR5fcPv4A8o_T0c2V6PDB79pXnpSSwfdb-W2pkYyed8xqkh3ALUS_lztUJOHAArT-jGzt1Bn7lWVZP32j5tJ28",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"year\": \"2023/2024\",\n  \"class\": 10,\n  \"students\": 150\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/stats-by-years/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"stats-by-years",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Additional Statistic",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Statistic",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiJjMmYzMzY0MjYzNzM0NmRjMGFjZTI5NzcyYjE5MzdmZTdhZmFhNzA3YjAyZjE4MTIwMDE4YzFjYzgxZmQ4MGNhM2MxOWVmMzdiNjJlYTMzNiIsImlhdCI6MTc1NzA3ODAwMC4xNjQ1MzgsIm5iZiI6MTc1NzA3ODAwMC4xNjQ1NDEsImV4cCI6MTc1NzE2NDM5OS45ODQyMjgsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.kPYlNrp_5Ox2yM5RQOwHrXfvqX1xdORtA1RQcnZ3v7e22tq7YvwDMZNIgOXTG89_-k2AMNp4s9DjCo9-bf8V4R_kvWIOJnonItTeEnEoaWhExgdIFkuwp6mUYHzZB8SsN9R8cp7074JG0n948N5qZLGnHfUJF5M0QmnEDhiruN6NQyo7YQxuouaGe2NuBFy_QAGZdiIdFpmaPNfaIvBFO8DKegrIgL6vTBIsOUSyGsFgMdr4YwETPct-9tg7JSR7R0gMK_yjAKvE2YooQlFx2A9yh1nW3GyFwRvvy_X0Ar66bchQteh9gbVH00rGlRN68uGiKCSRZ-q3XLVCYbg8vQp9hG6QqxlvypBZNyM1KSm8k_X7ycJ1sc3upIGuTmqPXOFvslwUqmNawT-GN7wOG7favjm_vNceCOPu5zcND_kAqEeqKYXTMfgRr13ozk3rC6LIwPHQmtmiqgbxFa9qI52br_WNFVGxpJpqeGuUw2XjbHkRKqcQHa6w9g_M2wdTtmim4Il9otU-IkTINEyh17Mh-2DEA5zT_VVwX2h2AgOktG7v8MRjrAq6jqzkSktx4jw-cYx-XWhK7f7XYT1qQ1AXI0CE0xI8kksQfG6REgFNWyNaPziivQuIh6ruWjz2MTJmuECaUY3HGd5hKA-TtVc8jb_DWH0DKBRP_BIGM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"year\": \"20237/20247\",\n  \"mo_other\": 5,\n  \"mo_other_students\": 75,\n  \"mo_other_classes\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/stats-additionals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"stats-additionals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKVJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiI3YjA3ZmY1NDQzMzgxMmNhMmJhNGRjZjM2ZDE2NDNiN2VlMmMxNWMzMjliNGIzOGFiNWUyNmY5YTBmNjViNGE1NDJhYzYxMGQwZTVjMjYzMiIsImlhdCI6MTc1NzA3ODUyNC42NTIyNDYsIm5iZiI6MTc1NzA3ODUyNC42NTIyNDgsImV4cCI6MTc1NzE2NDkyNC40OTEwNDIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.EUmjGifgjuaF8ABgQOxHHntBSd8dLOppMr0Zk5NVw30-uuLl8Q1QvEpZfPeAJAuwRYgCTfqyk8op771fi74_QT7Uiy38KpwTGZyIkFck5bKfTlI_3aHVlMG9RNywYaUb4HfuzVLSPgqkwTbb62IRjYJbnQ9aN5mxQ-WIoBQGhn6o6VEUdHhFkIcauEOY-gdLVSP1f8pDlKNOVzahtG_NFFaZVvfi1f6onF6eAd5Yy2N5mu5C1szDQjUfk8ldYhfxs-Jk0B0FDHS4L98wkmhc6xdCqBcKZzTaDZg_kDk4Mirtq5aZE1J8lE-SKMNdbr6QVwzAiQRCGQdkaij6eEJ_ydI7RCQlSlCJFhRmdhc7vN27f01vCgegXnbmDkXPEW5AmXFbpI30lVCokVzj6KdXLXHd_FimwnwtwAZAj2Puu1cHi_QGKSjpTItw-cULsSBxia65YetjcG4da6OkRrFENnbF4IUN5nkFFC8X1XqJgscKdq5ZtmQHK0PSjfJTgP070GFb2Rq4_QRIxWiZi_iIuOGQ6jU4JJ1jcloiMRz9LIuvPF1RQGpljoHteU22Q7c3x2GcfSSlZmnKoLfruj7bLdQu7jEukMWRtW8vv6tskT91UB95LGafPHtu-y3fhJhAQdORPEfpDpoMqy-4vzeWOa64djfYBpGXsjh9c9tQ5Js",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"year\": \"2023/2024\",\n  \"mo_other\": 5,\n  \"mo_other_students\": 75,\n  \"mo_other_classes\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/stats-additionals/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"stats-additionals",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiJkNThkNTZlMzMzNTVhZTBmYWI3NTI5ZGU3YWU2OWY0ZTBmMzgwMzRlOTY1NjRhOTRhMDQ5NGVlZTMzYTg0ZWRiMjVmNmNjZjVjM2MyMmE2ZiIsImlhdCI6MTc1NzA3ODgwMi44ODY1OTYsIm5iZiI6MTc1NzA3ODgwMi44ODY1OTksImV4cCI6MTc1NzE2NTIwMi43MzIzODksInN1YiI6IjEiLCJzY29wZXMiOltdfQ.PZDQHEBTEqxX9S21fibkxF_SzCXsi9CE14s84Mn0Vj6-QfHpvo74XfhDT4V8fjcPotQS9dZQVMFa_tujUVx2o0wfrBlVoIO7Mw5faXyzkf5SbpdfXToEJcmQ-stk0ZIQl9CoMn4MwFl1qUNJslQ3g-pjpAroM0WHCssreTUHvstXVZQscmB6sXgqtL5d83mx4pvYbzxU6cnZNmDDnr5akvWcpVB9B25uu08sYNcqLbOZxGc9FYT4pUCPBljarKGdP3JOaG_zTlV2gp-i_5sAIQjaZ0tCD6T0gSVKw3o3cDttWk4FlUWt2dqmfxifgX5RPPc2AExp7GDtm4f6Dm_iY3uIGYmAO54TNajQI2UHsdj-lQJdJkq31SW0uWyQfl2naklnVjgzDZ7XFtazlUzrelmk9FwK6590N_u6y8YTlnow0xl5ffyoKGwDb7XUlgItZpvsmjz62V4Mc3cAaLVYUcHm4GXcFEcIIEII6O1gxqIVdwiEuEaEUfmUiQQUqL6G0gA4v1hPGgnaGwWluJG_bBp_VyfLxJ6BZF3uNbZR5mQy5ePMvGRscV32TE-idnGyE0tsrG_ZWyF8-QwllvyrNid9oBbIk5zl6BK2o6blp887ioRRYFQPMC0OodvGsiwJSpKOkQ7Kh2kPngubzDNh9fPIXJjmUIXqO2yHUk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/stats-additionals/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"stats-additionals",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Banners",
+			"item": [
+				{
+					"name": "Public",
+					"item": [
+						{
+							"name": "banners",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "banners ID",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Manager",
+					"item": [
+						{
+							"name": "banners",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/v1/base/manager/banners",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"v1",
+										"base",
+										"manager",
+										"banners"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create banner",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiI3MmIyZDUyMWZhOTMzOTlkODBiNDBiMDAxMmEyOTQ4MGM3NGI4MjczN2U5YmMzOTE1ZjAwMDg3MjBlY2EwMDZlMjFjZDMwODZiMWM2MmU1NSIsImlhdCI6MTc1NzQwNzY5Ny45MzA1MSwibmJmIjoxNzU3NDA3Njk3LjkzMDUxMywiZXhwIjoxNzU3NDk0MDk3Ljc4Nzk3Miwic3ViIjoiMSIsInNjb3BlcyI6W119.Ydku9XqGXJUiwGTZZ02SkTtqoA8RFe08SQb4Ge_jOAUKxOBshAPO6i_1lZa03Tp38hAGN5fItPEcmAtjDOvg7SWzNyo16ON2t5Weh_k1j-cED4APwOTLAeICD_345KsZznnU7Jm36nJ4mIciEWzG7kP8teMekMlwMqF0VSg06K0cPDHPjPfaAPfNKOueOw3zOMMIwqIeoqMJuWBmqxFqbpoFAZNMeMHZclWxFFHqr67DYs3TtJnA-me49UBqmOCamhop--wziM_IuRgWab4MljE8yDwriklsOsT3PXiKGLquLOZmyDvcaeoUWrzVqdxptZLEAYu33byAyo6Kw7E4AFe_CnxpudBHKkJjsw9JzZQWNAgQU52wIuXiiUVbhIAAQ1CZGSm0Tvl4PLvbh5M1k8iw4ykhwBv6MW-Wa6afxdwmbNSVd16kpD975Eve0Mt7YFtVTVZFYPkBamAoHb5iJk8SaA8eibGTFgXEaJDLBg3Zt1MW1fD-Xb5lf8bG-cSw1cRsYnF4E4bVPpsnbKtZaQb0EUBH0hYOeB5KT6KpVU3ruy3yq-V_gSI7qvHVj1bzzX9EkQ-UtoxcfwrWm3D_04QAH-CQcjMuLN_IWwf26x-8bhYjQckhIDjRonISmnwIylar8qXXmyWhvEa7tomFh_MO8mMLtsxpBWu1NyMoZOs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"\",\n  \"content\": \"\",\n  \"type\": \"info\",\n  \"status\": \"active\",\n  \"display_lang\": \"ru\",\n  \"sort_order\": 0,\n  \"starts_at\": \"2024-01-01T00:00:00.000000Z\",\n  \"ends_at\": \"2024-12-31T23:59:59.000000Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/v1/base/manager/banners",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"v1",
+										"base",
+										"manager",
+										"banners"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get banners by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiI5MTEyMzM2MzQ0NjcyYzQ0MmU3N2I4ZTEwZWZmNmI4Nzk4ZDJlMmIxNDUzYmQwY2E4NjYyMjRiYzkwZmU1ODZkY2IxYzA4MmFlNjQ2OGFlNyIsImlhdCI6MTc1NzQxMTg4Ny42MTYwMDMsIm5iZiI6MTc1NzQxMTg4Ny42MTYwMDYsImV4cCI6MTc1NzQ5ODI4Ny40NzQyOTMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.lzUyAhuVq-sNukHRyZIXpwSV-yv394MBu4kCSxN98UysJHEDlsXARhU4iblwjRlVdT_LLOroTfnUOgsXkE1kpwf_nmg40Qy4z3RFhdjggL_JBIANn2Hd-OS9VQ3XD3ajCRk0bkEYqu1xVXzTQ-2OT09AnmzfdxVLczfqu6IsN4AtW5lPmL_4LG5xeaitPsJSDxRdFpvQFyRIFCNKbykmp6i75ZH9ka2zHzAVGXvBz3zVN7PiicusP-Nuv5cVv3A5eq8_PMimLZ7sWbR1q9k3fyQpPsvSrd3638f-6_zEK1CkFKXzOZJP6s0Z5gNWFXs-JDRMyty27m9KKV5pYE7nFDKY90GyF4D1UHUv7jB91SQ6pjTkOcOuzHMGkiMWqaerYnxm2x228oUTy2f-R1y-WNyXOeY2m0qdCDrqcSzLI66qEW8IKYAFDHC4hdsoTZYwvIAFwQiWicglO3O7fPz1mu4q3nFPyPUi3P8ebrnSP2K4Q1Mjj4K-lxBo0ZPzOqwYmjxIJ5lcbIAysxMUxASIQfWXJYQeBKRZydKQeVL-AnANoOjsuVU3t3BfiACfGrXeG7cwzEiDuAw9rfPJYPBkuhmcqcH93WMsh5pc1MzF6I-6rYTxDFvZ4bhFEAnGBYfy2qqoStbDP_pEJxHxBLZM8dePqD1zLpOfQCLsvmp8-Ok",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/v1/base/manager/banners/0af7609a-a531-4a6b-b725-0990f2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"v1",
+										"base",
+										"manager",
+										"banners",
+										"0af7609a-a531-4a6b-b725-0990f2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiI5MTEyMzM2MzQ0NjcyYzQ0MmU3N2I4ZTEwZWZmNmI4Nzk4ZDJlMmIxNDUzYmQwY2E4NjYyMjRiYzkwZmU1ODZkY2IxYzA4MmFlNjQ2OGFlNyIsImlhdCI6MTc1NzQxMTg4Ny42MTYwMDMsIm5iZiI6MTc1NzQxMTg4Ny42MTYwMDYsImV4cCI6MTc1NzQ5ODI4Ny40NzQyOTMsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.lzUyAhuVq-sNukHRyZIXpwSV-yv394MBu4kCSxN98UysJHEDlsXARhU4iblwjRlVdT_LLOroTfnUOgsXkE1kpwf_nmg40Qy4z3RFhdjggL_JBIANn2Hd-OS9VQ3XD3ajCRk0bkEYqu1xVXzTQ-2OT09AnmzfdxVLczfqu6IsN4AtW5lPmL_4LG5xeaitPsJSDxRdFpvQFyRIFCNKbykmp6i75ZH9ka2zHzAVGXvBz3zVN7PiicusP-Nuv5cVv3A5eq8_PMimLZ7sWbR1q9k3fyQpPsvSrd3638f-6_zEK1CkFKXzOZJP6s0Z5gNWFXs-JDRMyty27m9KKV5pYE7nFDKY90GyF4D1UHUv7jB91SQ6pjTkOcOuzHMGkiMWqaerYnxm2x228oUTy2f-R1y-WNyXOeY2m0qdCDrqcSzLI66qEW8IKYAFDHC4hdsoTZYwvIAFwQiWicglO3O7fPz1mu4q3nFPyPUi3P8ebrnSP2K4Q1Mjj4K-lxBo0ZPzOqwYmjxIJ5lcbIAysxMUxASIQfWXJYQeBKRZydKQeVL-AnANoOjsuVU3t3BfiACfGrXeG7cwzEiDuAw9rfPJYPBkuhmcqcH93WMsh5pc1MzF6I-6rYTxDFvZ4bhFEAnGBYfy2qqoStbDP_pEJxHxBLZM8dePqD1zLpOfQCLsvmp8-Ok",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"Важное мимо\",\n  \"content\": \"Текст уведомления для пользователей\",\n  \"type\": \"info\",\n  \"status\": \"active\",\n  \"display_lang\": \"ru\",\n  \"sort_order\": 0,\n  \"starts_at\": \"2024-01-01T00:00:00.000000Z\",\n  \"ends_at\": \"2024-12-31T23:59:59.000000Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9002/api/v1/base/manager/banners/0af7609a-a531-4a6b-b725-0990f28",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"v1",
+										"base",
+										"manager",
+										"banners",
+										"0af7609a-a531-4a6b-b725-0990f28"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete banners",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "d8a19171-758c-4c8d62-c87e016e54e6",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:9002/api/v1/base/manager/banners/d8a19171-758c-4c9d-8d62-c87e016e54e6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"api",
+										"v1",
+										"base",
+										"manager",
+										"banners",
+										"d8a19171-758c-4c9d-8d62-c87e016e54e6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "toggle",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Manager Users",
+			"item": [
+				{
+					"name": "All managers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiI5MDNlNjkwZjA3MDczYTNlNTkyNTY3ZmQxNDc5NWMxOTU0NTJmN2NkNzEwMzBkMGU3OGRhZjVmZWRiNDA2NzA0NmEzYTA4OWIzODkwMTI0YSIsImlhdCI6MTc1NzY3MDUxMi4xMjE0NiwibmJmIjoxNzU3NjcwNTEyLjEyMTQ2NCwiZXhwIjoxNzU3NzU2OTExLjk5NzMxNywic3ViIjoiMSIsInNjb3BlcyI6W119.jbhB9fimaF3bjYsKWL4oaw9ucRSUYj33aKl3dATZtwDw8nFEE6QSA4w-doTAzJ-8bIdncq8Q9IiLgApexxcsSSDFEAxYFoRRvPqVhw0I1zcA2z6OCfT5t2mhE-QGuQJ6kAFw7uyA7vD7WMJspeL_hykpgmamHJRvqxPUclHcd6BElDxN9cPX_DV70j7iSbLJpt-62tIM_FoIhvailfwQXjnSLuBHkLF5jqJQbNhwlDXIpqftS1LpBelGrB--x7fGGbLVWFwQjbhk9FZI-zOc_hNAT4jwWz2deofiYDl0DtKHBmlBvoMt73PMR-Qa8VuveScz-wquFc_RYjW3RSEFG21iPWQg7XV6H2kBaCmkhvzowWNetIbX8Ga98fHA2eH9brZm-SpnCw_7XqJqb3LPe-5SEw0FWIXHptgyBaZmUNLy8c0RD00_DDNutUZC4bgIRA2YMupwJVBNrd_gQ36FwWXk3LBoQNbReOwWQn0rhKzHF5XeMVtf4dnGrnTaxUKqdyBGvZRVG4hsDdRlQ0CLmIUcLAMunZrIgwNpBAHwOPY5BdZ2Nv9M1piU1loD2FIWMIq-6_nLm0nGOJwauIlLx4GQL8ehqzDO_G8hZ1CDWCR5zHhHOlAyP2RntXCOk6Ts9HMS1vHqcFTeHTNnkiOBne06l_XV17-Lo4VDpZVw9XU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/managers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"managers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New manager",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiI5MDNlNjkwZjA3MDczYTNlNTkyNTY3ZmQxNDc5NWMxOTU0NTJmN2NkNzEwMzBkMGU3OGRhZjVmZWRiNDA2NzA0NmEzYTA4OWIzODkwMTI0YSIsImlhdCI6MTc1NzY3MDUxMi4xMjE0NiwibmJmIjoxNzU3NjcwNTEyLjEyMTQ2NCwiZXhwIjoxNzU3NzU2OTExLjk5NzMxNywic3ViIjoiMSIsInNjb3BlcyI6W119.jbhB9fimaF3bjYsKWL4oaw9ucRSUYj33aKl3dATZtwDw8nFEE6QSA4w-doTAzJ-8bIdncq8Q9IiLgApexxcsSSDFEAxYFoRRvPqVhw0I1zcA2z6OCfT5t2mhE-QGuQJ6kAFw7uyA7vD7WMJspeL_hykpgmamHJRvqxPUclHcd6BElDxN9cPX_DV70j7iSbLJpt-62tIM_FoIhvailfwQXjnSLuBHkLF5jqJQbNhwlDXIpqftS1LpBelGrB--x7fGGbLVWFwQjbhk9FZI-zOc_hNAT4jwWz2deofiYDl0DtKHBmlBvoMt73PMR-Qa8VuveScz-wquFc_RYjW3RSEFG21iPWQg7XV6H2kBaCmkhvzowWNetIbX8Ga98fHA2eH9brZm-SpnCw_7XqJqb3LPe-5SEw0FWIXHptgyBaZmUNLy8c0RD00_DDNutUZC4bgIRA2YMupwJVBNrd_gQ36FwWXk3LBoQNbReOwWQn0rhKzHF5XeMVtf4dnGrnTaxUKqdyBGvZRVG4hsDdRlQ0CLmIUcLAMunZrIgwNpBAHwOPY5BdZ2Nv9M1piU1loD2FIWMIq-6_nLm0nGOJwauIlLx4GQL8ehqzDO_G8hZ1CDWCR5zHhHOlAyP2RntXCOk6Ts9HMS1vHqcFTeHTNnkiOBne06l_XV17-Lo4VDpZVw9XU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Иван Иванов\",\n  \"email\": \"ivan@example.com\",\n  \"password\": \"password123\",\n  \"first_name\": \"Иван\",\n  \"last_name\": \"Иванов\",\n  \"phone\": \"+375 29 123-45-67\",\n  \"position\": \"Администратор\",\n  \"bio\": \"Опытный администратор системы\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/managers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"managers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Manager or ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Иван Иванов\",\n  \"email\": \"ivanhurf@example.com\",\n  \"password\": \"newpassword123\",\n  \"first_name\": \"Иван\",\n  \"last_name\": \"Иванов\",\n  \"phone\": \"+375 29 123-45-67\",\n  \"position\": \"Администратор\",\n  \"bio\": \"Опытный администратор системы\",\n  \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/managers/43",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"managers",
+								"43"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5ZmIzOGQwZi0wOTI0LTQwNGMtOTdjYy00MTE3YjgzODIzNzAiLCJqdGkiOiI1OTY2MDEyNzBiN2FmOGNiYTEwMDg5MDU3MjE5MjU5ZDQzZjQ2ODkwZjM3MTFhMjFjNzQxNTFlYjVkNDY4NzMyNWJmODNhNTMzZDhkM2QxMyIsImlhdCI6MTc1ODAwNDg0NC4wNzk5NzgsIm5iZiI6MTc1ODAwNDg0NC4wNzk5ODEsImV4cCI6MTc1ODA5MTI0My42OTQzOCwic3ViIjoiMSIsInNjb3BlcyI6W119.uSJ7wXIaFg6Mx5R3Su_tpdlZ6EtAmJUgLD_ji3xG6XURtYbjO7eCWqOxd_bKzd2WpeXkEiAeIE1VJy87T4hEbJWuKh2qpskiGHTsnHgXTC45jqL_yz8wbbMhXMDWmkb3jSsX3Zv-H64yTOdtNaZCjDOAbE9kjvquXn5JSqmBfxIcVqK9VsdeKUEGj9WtxhB5iCyjsL-yIcb6JGkiQfdoKlW1F75yqBfLctjS4patzur1zczqJschMWVW7mxlr3WDvcEXloegP33Dt29b0zagQm6EafQM8B8Bge21pX61vN5cDrhkM8zFwSFwa3N7y-PadfaKB2mSozx30M_6jQ4W2o65vw1PKogC4ZCt3Y1Xv23nVTBKKTuwl1bJ5LC3i_dywiUJaEvRkQhKhJLxcpZ684epEyBsUOQEHYvysl6BhzIft5Id_dKReob7ImWu8qxmiaKeNwpKR95TU40jIfjQWEVx-Z-LOcjBhvkQB6S3U7XIAscdcdk9bvCvv6Bb-zEqNsXnUu4dkXJsLjUXKUHSoiRUGC1AAOyfqnEr0iIfL_SVVAPsQG7Q_59ad5SGmG60D_a1o7lCXOe-opeXpz8qRoDEUAhuRTNUUH8qvkMD8XeZF8LUKODgVDvvfbeMB4nWOfHn9wY1hDm031Xiq3WZzKnP82sRxfQ4SU4IAFmG78",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/managers/46",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"managers",
+								"46"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restore",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/managers/44/restore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"managers",
+								"44",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forse delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9002/api/v1/base/manager/managers/46/force-delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"api",
+								"v1",
+								"base",
+								"manager",
+								"managers",
+								"46",
+								"force-delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
