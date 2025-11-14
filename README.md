@@ -32,12 +32,12 @@ QA Engineer с опытом тестирования веб-приложений
 ---
 
 ## 🐛 Тестовые артефакты (pk-base)
-- **Тест-кейсы**: [Демо онлайн](https://md-test-cases-app.onrender.com/) / [Markdown](./projects/portfolio/test-cases.md)
-- **[Баг-репорты](./projects/portfolio/task-tracker.md)**
-- **[Техники тест-дизайна](./projects/portfolio/test-design.md)** 
-- **[Чек-листы](./projects/portfolio/checklists.md)** 
-- **[Коллекции в Postman](./projects/portfolio/collection.json)** 
-- **[Тестовые сценарии](./projects/portfolio/test-scenarios.md)** 
+- **Тест-кейсы**: [Демо онлайн](https://md-test-cases-app.onrender.com/) / [Markdown](./projects/pk-base/test-cases.md)
+- **[Баг-репорты](./projects/pk-base/task-tracker.md)**
+- **[Техники тест-дизайна](./projects/pk-base/test-design.md)** 
+- **[Чек-листы](./projects/pk-base/checklists.md)** 
+- **[Коллекции в Postman](./projects/pk-base/collection.json)** 
+- **[Тестовые сценарии](./projects/pk-base/test-scenarios.md)** 
 ---
 
 ## 📧 Контакты
